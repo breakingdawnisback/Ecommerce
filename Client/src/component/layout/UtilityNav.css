@@ -1,0 +1,30 @@
+/* src/components/layout/UtilityNav.css */
+.utility-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  background-color: var(--color-light-grey);
+  font-size: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.country-selector, .store-finder {
+  color: var(--color-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.country-selector {
+    padding-right: 15px;
+    background: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5' fill='none'%3e%3cpath d='M0 0l5 5 5-5H0z' fill='%23757575'/%3e%3c/svg%3e") no-repeat right center;
+    background-size: 10px 5px;
+}
+
+/* This bar is hidden on mobile */
+@media (max-width: 960px) {
+  .utility-nav {
+    display: none;
+  }
+}

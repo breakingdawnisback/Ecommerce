@@ -1,0 +1,18 @@
+/* src/components/layout/Header.css */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-white);
+  color: var(--color-navy);
+  transition: background-color 0.3s ease;
+}
+
+.main-header-container {
+  /* This container will hold the UtilityNav and Navbar */
+}
+
+/* We will add styles for transparent header later */

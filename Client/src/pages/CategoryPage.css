@@ -1,0 +1,46 @@
+/* src/pages/CategoryPage.css */
+.category-page {
+  max-width: 1690px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 2rem;
+}
+
+.breadcrumbs {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-grey);
+  margin-bottom: 1rem;
+}
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.page-header h1 {
+  font-family: var(--font-secondary);
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.category-description {
+  margin-top: 1rem;
+  color: var(--color-grey);
+  max-width: 800px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 280px 1fr; /* Sidebar and main grid */
+  gap: 2rem;
+}
+
+@media (max-width: 960px) {
+  .main-content {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
+}

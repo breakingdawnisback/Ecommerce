@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* As seen in the original source */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+    padding-top: 60px; /* Adjust based on your header's height */
+}

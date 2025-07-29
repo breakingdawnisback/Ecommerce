@@ -1,0 +1,85 @@
+/* src/components/FiftyFiftySection.css */
+.fifty-fifty-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.fifty-fifty-block {
+  position: relative;
+  overflow: hidden;
+}
+
+.fifty-fifty-image {
+  height: 100%;
+}
+.fifty-fifty-image img, .fifty-fifty-image picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.fifty-fifty-block:hover .fifty-fifty-image img {
+  transform: scale(1.05);
+}
+
+.fifty-fifty-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  color: var(--color-white);
+  z-index: 2;
+  max-width: 400px;
+}
+
+.brand-text {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: var(--font-secondary);
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+
+.section-dek {
+  font-family: var(--font-secondary);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.section-links {
+  margin-top: 1.5rem;
+}
+
+.section-cta {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .fifty-fifty-section {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+  .fifty-fifty-section.reverse-mobile {
+    display: flex;
+    flex-direction: column-reverse; /* For the second 50/50 section */
+  }
+  .fifty-fifty-content {
+    left: 1.5rem;
+    bottom: 1.5rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+}

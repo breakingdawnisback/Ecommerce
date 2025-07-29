@@ -1,0 +1,44 @@
+.full-width-banner {
+  position: relative;
+  width: 100%;
+}
+
+.banner-image img, .banner-image picture {
+  width: 100%;
+  display: block;
+}
+
+.banner-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  color: var(--color-white);
+  z-index: 2;
+  max-width: 450px;
+}
+
+/* We can reuse the same text styles from FiftyFiftySection */
+.full-width-banner .brand-text,
+.full-width-banner .section-title,
+.full-width-banner .section-dek,
+.full-width-banner .section-links,
+.full-width-banner .section-cta {
+  /* Inherit styles to avoid duplication. If they differ, define them here. */
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .banner-content {
+    position: relative;
+    color: var(--color-navy);
+    padding: 2rem 1.5rem;
+    left: 0;
+    bottom: 0;
+    background-color: #f7f7f7;
+    text-align: center;
+  }
+  .banner-content .section-cta {
+    color: var(--color-navy);
+    border-color: var(--color-navy);
+  }
+}

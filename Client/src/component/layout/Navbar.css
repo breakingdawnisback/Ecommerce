@@ -1,0 +1,91 @@
+/* src/components/layout/Navbar.css */
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--header-height);
+  padding: 0 2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-left .logo {
+  height: 25px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 32px;
+  font-weight: normal;
+  color: #0b1f35; /* dark navy color */
+  letter-spacing: 8px;
+  text-decoration: none;
+  display: inline-block; /* Adjust size as needed */
+}
+
+.navbar-center .nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-center .nav-link {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  padding-bottom: 29px; /* This padding with border-bottom creates the hover effect */
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.navbar-center .nav-link:hover {
+  border-color: var(--color-navy);
+}
+
+.navbar-right .nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.icon-button {
+  color: var(--color-navy);
+}
+.icon-button svg {
+    width: 22px;
+    height: 22px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 960px) {
+  .navbar-center, .navbar-right .nav-icons {
+    display: none;
+  }
+  .mobile-menu-toggle {
+    display: block;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+  /* Center the logo on mobile when menu is not open */
+  .navbar-left {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    padding-left: 24px; /* offset for hamburger icon */
+  }
+
+}
+
+/* Add this to the Navbar CSS file */
+.nav-item {
+  position: relative; /* This is CRUCIAL for positioning the absolute mega menu */
+}
+
+/* This will show the mega menu when its parent li is hovered */
+.nav-item:hover .mega-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

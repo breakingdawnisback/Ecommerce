@@ -1,0 +1,104 @@
+/* src/components/FiltersPanel.css */
+.filters-panel {
+  border-right: 1px solid #e0e0e0;
+  padding-right: 2rem;
+}
+.filter-group {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.filter-group summary {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filter-group summary::after {
+  content: '−';
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+details:not([open]) > summary::after {
+  content: '+';
+}
+.filter-group ul {
+  margin-top: 1rem;
+}
+.filter-group ul li a {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--color-grey);
+}
+.filter-group ul li a:hover {
+  color: var(--color-navy);
+}
+.sort-by-group label {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+.sort-by-select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    border: 1px solid var(--color-grey);
+}
+.filter-size-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+}
+.filter-size-list button {
+    border: 1px solid #e0e0e0;
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+}
+.filter-size-list button:hover {
+    border-color: var(--color-navy);
+}
+.filter-color-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+.color-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+}
+@media (max-width: 960px) {
+  .filters-panel {
+    display: none;
+  }
+}
+.filter-group ul li .filter-button {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+  color: var(--color-grey);
+}
+
+.filter-group ul li .filter-button:hover {
+  color: var(--color-navy);
+}
+
+.filter-group ul li .filter-button.active {
+  color: var(--color-navy);
+  font-weight: 700;
+}
+
+.color-swatch.active {
+  border: 2px solid var(--color-navy);
+  transform: scale(1.1);
+}

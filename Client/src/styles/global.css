@@ -1,0 +1,53 @@
+/* src/styles/global.css */
+
+/* 1. Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Lora:wght@400;500&display=swap');
+
+/* 2. CSS Variables */
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Lora', serif;
+  --color-navy: #041e3a;
+  --color-white: #ffffff;
+  --color-gold: #c5a76f;
+  --color-grey: #757575;
+  --color-light-grey: #f5f5f5;
+  --header-height: 80px; /* Adjust as we build */
+  --top-banner-height: 40px; /* Adjust as we build */
+}
+
+/* 3. CSS Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  color: var(--color-navy);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img, video {
+    max-width: 100%;
+    display: block;
+}
