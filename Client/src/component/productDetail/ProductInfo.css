@@ -93,3 +93,15 @@
   padding-left: 1.5rem;
   margin-top: 1rem;
 }
+
+.add-to-bag-button:disabled {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.add-to-bag-button:disabled:hover {
+  background-color: #cccccc;
+  color: #666666;
+}

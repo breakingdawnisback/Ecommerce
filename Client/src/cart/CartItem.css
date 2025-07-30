@@ -1,0 +1,131 @@
+.cart-item-row {
+    border-bottom: 1px solid #e1e1e5;
+}
+
+.cart-item-row td {
+    padding: 1.5rem 0;
+    vertical-align: top;
+}
+
+.item-info-wrapper {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.item-image img {
+    width: 150px;
+    height: auto;
+    object-fit: cover;
+}
+
+.item-name {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-navy); /* Assumes color variables from global.css */
+}
+
+.item-attribute {
+    font-size: 0.8rem;
+    color: var(--color-grey);
+    margin-bottom: 0.25rem;
+}
+
+.item-quantity-cell {
+    text-align: center;
+}
+
+.quantity-select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    width: 70px;
+}
+
+.item-actions-desktop {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.button-text-small {
+    font-size: 0.75rem;
+    text-decoration: underline;
+    text-transform: capitalize;
+    color: var(--color-grey);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.item-price-cell,
+.item-total-cell {
+    text-align: right;
+    font-weight: 600;
+    color: var(--color-navy);
+}
+
+.item-actions-mobile {
+    display: none; /* Hidden on desktop */
+}
+
+/* --- Responsive Styles --- */
+@media (max-width: 960px) {
+    .cart-item-row {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+
+    .cart-item-row td {
+        padding: 0;
+        border: none;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .item-image img {
+        width: 120px;
+    }
+
+    .item-price-cell, .item-total-cell {
+        font-size: 1rem;
+        text-align: left;
+        margin-top: 1rem;
+    }
+
+    .item-price-cell::before {
+        content: 'Price: ';
+        font-weight: normal;
+        color: var(--color-grey);
+    }
+
+    .item-total-cell::before {
+        content: 'Total: ';
+        font-weight: normal;
+        color: var(--color-grey);
+    }
+
+    .item-quantity-cell {
+        margin-top: 1rem;
+        text-align: left;
+    }
+
+    .item-quantity-cell::before {
+        content: 'Qty:';
+        margin-right: 10px;
+        font-size: 0.8rem;
+        color: var(--color-grey);
+    }
+
+    .item-actions-desktop {
+        display: none;
+    }
+
+    .item-actions-mobile {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+}

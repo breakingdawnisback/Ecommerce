@@ -1,0 +1,129 @@
+.cart-page-container {
+    max-width: 1690px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Founders Grotesk text Regular', Helvetica, Arial, sans-serif; /* Using a fallback */
+}
+
+/* --- Top Actions --- */
+.cart-actions-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e1e1e5;
+    margin-bottom: 2rem;
+}
+
+.cart-actions-top .cart-left {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Reusable Button Styles - You can move these to a global CSS file */
+.button.primary-button {
+    background-color: #041e3a; /* var(--color-navy) */
+    color: #ffffff; /* var(--color-white) */
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 1px solid #041e3a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button.primary-button:hover {
+    background-color: #ffffff;
+    color: #041e3a;
+}
+
+.button-text {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-decoration: underline;
+    color: #041e3a;
+}
+
+.cart-actions-top .cart-right .cart-help {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #757575; /* var(--color-grey) */
+}
+
+.cart-actions-top .cart-right .cart-help a {
+    text-decoration: underline;
+}
+
+/* --- Main Content Layout --- */
+.cart-main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.cart-items-panel .panel-header {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+}
+
+.cart-items-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-items-table thead {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #757575;
+    border-bottom: 1px solid #e1e1e5;
+}
+
+.cart-items-table th {
+    padding-bottom: 0.75rem;
+}
+
+.header-item { width: 55%; }
+.header-qty { width: 15%; text-align: center; }
+.header-price { width: 15%; text-align: right; }
+.header-total { width: 15%; text-align: right; }
+
+.cart-empty-message {
+    padding: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--color-grey);
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 960px) {
+    .cart-main-content {
+        grid-template-columns: 1fr;
+    }
+    .cart-actions-top {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        align-items: stretch;
+    }
+    .cart-actions-top .cart-right .cart-help {
+        text-align: center;
+    }
+    .cart-actions-top .cart-left {
+        flex-direction: column;
+    }
+    .button.primary-button {
+        width: 100%;
+    }
+    .cart-items-table thead {
+        display: none;
+    }
+}

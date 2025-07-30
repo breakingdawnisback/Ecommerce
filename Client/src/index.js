@@ -4,13 +4,16 @@ import { BrowserRouter } from 'react-router-dom'; // <-- Make sure this is here
 import './styles/global.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { CartProvider } from './Context/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* This is the single, top-level Router for your entire app */}
     <BrowserRouter>
+    <CartProvider>
       <App />
+      </CartProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

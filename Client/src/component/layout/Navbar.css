@@ -89,3 +89,22 @@
   visibility: visible;
   transform: translateY(0);
 }
+
+.cart-icon-wrapper {
+  position: relative;
+}
+.cart-badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background-color: #041e3a; /* var(--color-navy) */
+  color: #ffffff; /* var(--color-white) */
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}

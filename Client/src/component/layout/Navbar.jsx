@@ -1,14 +1,20 @@
 // src/components/layout/Navbar.jsx
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './Navbar.css'; // Make sure to import CSS
 import { SearchIcon, UserIcon, HeartIcon, BagIcon } from '../common/Icons';
 import MegaMenu from './MegaMenu'; // <-- Import MegaMenu
 import { menuData } from './menuData'; // <-- Import the data
+import CartContext from '../../Context/CartContext';
+import { Link } from 'react-router-dom';
 
 const navLinks = ['Men', 'Women', 'Kids & Baby', 'Home', 'Discover', 'Sale'];
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
+    const { cart } = useContext(CartContext); // <-- Use context to get cart data
+
+  // Calculate total items from the cart state
+  const totalItems = cart ? cart.items.reduce((sum, item) => sum + item.quantity, 0) : 0;
   return (
     <nav className="navbar" onMouseLeave={() => setActiveMenu(null)}>
       <div className="navbar-left">
@@ -39,9 +45,11 @@ const Navbar = () => {
           <a href="#" className="icon-button" aria-label="Wishlist">
             <HeartIcon />
           </a>
-          <a href="#" className="icon-button" aria-label="Shopping Bag">
+         <Link to="/cart" className="icon-button cart-icon-wrapper" aria-label="Shopping Bag">
             <BagIcon />
-          </a>
+            {/* Conditionally render the badge */}
+            {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
+          </Link>
         </div>
       </div>
       <div className="mobile-menu-toggle">

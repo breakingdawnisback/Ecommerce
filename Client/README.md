@@ -1,47 +1,105 @@
-
 # Shopping Site Client
 
-## File Structure
+## File Structure (Detailed)
 
 ```
-shoping-site/
-  Client/
-    package.json
-    README.md
-    public/
-      favicon.ico
-      index.html
-      logo192.png
-      logo512.png
-      manifest.json
-      robots.txt
-    src/
-      App.css
-      App.js
-      App.test.js
-      index.css
-      index.js
-      logo.svg
-      reportWebVitals.js
-      setupTests.js
-      app/
-      component/
-        home/
-          HeroSlider.css
-          HeroSlider.js
-          HomeSections.css
-          HomeSections.js
-        layout/
-          Footer.css
-          Footer.js
-          Header.css
-          Header.js
-          Navbar.css
-          Navbar.js
-      pages/
-        HomePage.js
-  Server/
+Client/
+  package.json
+  README.md
+  public/
+    favicon.ico
+    index.html
+    logo192.png
+    logo512.png
+    manifest.json
+    robots.txt
+  src/
+    App.css
+    App.js
+    App.test.js
+    index.css
+    index.js
+    logo.svg
+    main.jsx
+    reportWebVitals.js
+    setupTests.js
+    app/                   # (empty or app-specific logic)
+    assets/
+      .keep
+      fonts/
+        .keep
+      images/
+        .keep
+    cart/
+      CartItem.css
+      CartItems.js
+      OrderSummary.css
+      OrderSummary.js
+    component/
+      FiftyFiftySection.css
+      FiftyFiftySection.js
+      FiltersPanel.css
+      FiltersPanel.jsx
+      FullWidthBanner.css
+      FullWidthBanner.js
+      Hero.css
+      Hero.js
+      layout/
+        Footer.css
+        Footer.js
+        Header.css
+        Header.jsx
+        Layout.js
+        MegaMenu.css
+        MegaMenu.js
+        menuData.js
+        Navbar.css
+        Navbar.jsx
+        TopBanner.css
+        TopBanner.jsx
+        UtilityNav.css
+        UtilityNav.jsx
+      common/
+        AddToBagModal.css
+        AddToBagModal.js
+        Icons.jsx
+      productDetail/
+        ProductGallery.css
+        ProductGallery.js
+        ProductInfo.css
+        ProductInfo.js
+      products/
+        polo-shirt-products.js
+        ProductCard.css
+        ProductCard.js
+        SubCategoryNav.css
+        SubCategoryNav.js
+    Context/
+      CartContext.js
+    pages/
+      CartPage.css
+      CartPage.js
+      CategoryPage.css
+      CategoryPage.js
+      HomePage.jsx
+      more.md
+      ProductDetailPage.css
+      ProductDetailPage.js
+    styles/
+      global.css
+      GlobalStyles.js
 ```
+
+- `public/`: Static assets for the React app.
+- `src/`: Main source code for the React frontend.
+  - `component/`: UI components, organized by feature (layout, product, common, etc).
+  - `cart/`: Cart-related UI and logic.
+  - `Context/`: React context for global state (e.g., cart context).
+  - `pages/`: Top-level pages/routes for the app.
+  - `assets/`: Fonts and images (currently placeholders).
+  - `styles/`: Global styles and style helpers.
+
+---
 
 This project is a React-based frontend for an e-commerce site. Below is a guide to the main structure and where key features are implemented:
 
@@ -161,3 +219,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Updates
+
+- README last updated to ensure documentation is present and up to date for both Client and Server (see Server/README.md for backend details).
